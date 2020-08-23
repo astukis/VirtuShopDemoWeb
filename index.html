@@ -2,25 +2,100 @@
 <html>
 <head>
 	<title>Hello, I am Aistis</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-	<link rel="stylesheet" href="design.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">	<link rel="stylesheet" href="design.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="scripts.js"></script>
-
+	<script src="https://kit.fontawesome.com/7b8e63bb74.js"></script>
 </head>
 <body>
-<div class="bg">
+	<nav role="navigation">
+  <div id="menuToggle">
+    <input type="checkbox" />
+    <span></span>
+    <span></span>
+    <span></span>  
+    <ul id="menu">
+      <a href="#1"><li>Welcome Screen</li></a>
+      <a href="#2"><li>About Me</li></a>
+      <a href="#3"><li>Timeline</li></a>
+    </ul>
+  </div>
+</nav>
+<div class="bg" id="1">
 	<p class="titleBottomText">Nice to meet you.<br>My name is Aistis!</p>
 </div>
-<div class="aboutMeDiv">
-	<h1 class="aboutMeTitle hideme"> A short intro about me</h1><br>
+<div class="aboutMeDiv" id="2">
+	<h1 class="titleText hideme"> A short intro about me</h1><br>
 	<div class="row widthLimit">
-    	<div class="col-4 mx-auto text-center">
+    	<div class="col-7 mx-auto text-center">
         	<img src="img/me_front.jpg" class="aboutMeImage hideme">
     	</div>
 	</div>
 	<p class="hideme aboutMeText">I am a young aspiring developer from Lithuania who always searches for ways to improve. I've been passionate about technology since I was a kid and dial-up internet, CD drives and flip phones were grand inovations.</p>
+    <button type="button" class="btn btn-outline-light hideme resumeButton" onclick="openResume();"><i class="far fa-file"></i> Read my resume</button>
+</div>
+<div class="timelineDiv" id="3">
+	<h1 class="titleText hideme">Timeline</h1><br>
+	<div class="timeline" id="timeline">
+	  <div class="timeline-item">
+	    <div class="timeline-icon">
+	      <br><i class="fa fa-child" aria-hidden="true"></i>
+	    </div>
+	    <div class="timeline-content hideme">
+	      <p class="timeline-content-date ">1999</p>>
+	      <p>I was born in Lazdijai, Lithuania</p>
+	    </div>
+	  </div>
+	  <div class="timeline-item">
+	    <div class="timeline-icon">
+	      <br><i class="fa fa-desktop" aria-hidden="true"></i>
+	    </div>
+	    <div class="timeline-content right">
+	      <p class="timeline-content-date">Around 2015</p>>
+	      <p>Assembled my first computer from scrap parts</p>
+	    </div>
+	  </div>
+	  <div class="timeline-item">
+	    <div class="timeline-icon">
+	      <br><i class="fa fa-code" aria-hidden="true"></i>
+	    </div>
+	    <div class="timeline-content">
+	      <p class="timeline-content-date">2016-2017</p>>
+	      <p>Learned basics of C++, C# and started developing games in Unity. Completed a 100 hours game development course by Solid Education (Lazdijai, Lithuania)</p>
+	    </div>
+	  </div>
+	  <div class="timeline-item">
+	    <div class="timeline-icon">
+	      <br><i class="fa fa-book" aria-hidden="true"></i>
+	    </div>
+	    <div class="timeline-content right">
+	      <p class="timeline-content-date">2017</p>>
+	      <p>Did a summer internship in an IT company Solid Education (Kaunas, Lithuania). Primarily used C# MVC, MySQL and Git</p>
+	    </div>
+	  </div>
+	  <div class="timeline-item">
+	    <div class="timeline-icon">
+	      <br><i class="fa fa-graduation-cap" aria-hidden="true"></i>
+	    </div>
+	    <div class="timeline-content">
+	      <p class="timeline-content-date">2018</p>>
+	      <p>Graduated Lazdijai Motiejus Gustaitis gymnasium with the highest score in English. Started studying in Kaunas University of Technology as an IT Engineer.</p>
+	    </div>
+	  </div>
+	  <div class="timeline-item">
+	    <div class="timeline-icon">
+	      <br><i class="fa fa-bug" aria-hidden="true"></i>
+	    </div>
+	    <div class="timeline-content right">
+	      <p class="timeline-content-date">2019</p>>
+	      <p>Started working in uTest platform as a Freelance QA tester.</p>
+	    </div>
+	  </div>
+	</div>
 </div>
 </body>
+<!--
+Special thanks to Erik Terwan for providing the hamburger menu : https://codepen.io/erikterwan/
+//-->
 </html>

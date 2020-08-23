@@ -3,6 +3,131 @@ body, html {
   font-size: calc(0.8em + 1vw);
   background-color: #2e2e2e;
   max-width: 100vw !important;
+  scroll-behavior: smooth;
+}
+#menuToggle
+{
+  display: block;
+  position: fixed;
+  top: 1.5vw;
+  left: 1.5vw;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+#menuToggle a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+#menuToggle a:hover
+{
+  color: tomato;
+}
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: yellow;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
 }
 .bg {
   /* The image used */
@@ -17,7 +142,7 @@ body, html {
 .titleBottomText
 {
 	/*Positioning of text */
-	position:absolute;                  
+	  position:absolute;                  
     bottom:0;                          
     left:50%;    
     transform: translateX(-50%);
@@ -31,12 +156,10 @@ body, html {
 	opacity: 0;
 }
 .aboutMeDiv{
-	padding: 0 0 0;
 	height: 100%;
 	background-image: url("img/dotsBG.png");
 }
-
-.aboutMeTitle
+.titleText
 {
 	margin-top: 0;
 	padding-top: 4vh;
@@ -59,4 +182,148 @@ body, html {
 {
 	max-height: 30vh;
 	border-radius: 50%;
+}
+.resumeButton{
+  white-space: nowrap;
+  text-align: center;
+  position:absolute;                  
+  left:50%;    
+  transform: translateX(-50%);
+}
+.timelineDiv{
+  background-image: url("img/dotsBG2.png");
+}
+.timeline .timeline-item::after, .timeline .timeline-item::before {
+  content: '';
+  display: block;
+  width: 100%;
+}
+
+.timeline {
+  position: relative;
+  width: 100%;
+}
+
+.timeline::before {
+  background: #fefefe;
+  content: '';
+  height: 100%;
+  left: 50%;
+  position: absolute;
+  top: 0;
+  width: 3px;
+}
+
+.timeline::after {
+  clear: both;
+  content: '';
+  display: table;
+  width: 100%;
+}
+
+.timeline a {
+  color: #fefefe;
+  font-weight: bold;
+  transition: all 0.25s ease-in;
+}
+
+.timeline a:hover {
+  box-shadow: 0 1px 0px 0px #fefefe;
+  transition: all 0.25s ease-in;
+}
+
+.timeline .timeline-item {
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.timeline .timeline-item .timeline-icon {
+  background: #fefefe;
+  border-radius: 50%;
+  height: 50px;
+  left: 50%;
+  margin-left: -23px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 50px;
+  text-align: center;
+  line-height: 0.8 !important;
+  font-size: 20px !important;
+}
+.timeline .timeline-item .timeline-icon i
+{
+  color: black;
+}
+
+.timeline .timeline-item .timeline-icon img,
+.timeline .timeline-item .timeline-icon svg {
+  left: 14px;
+  position: relative;
+  top: 11px;
+  
+}
+
+.timeline .timeline-item .timeline-icon svg {
+  top: 14px;
+}
+
+.timeline .timeline-item .timeline-content {
+  padding: 20px;
+  text-align: right;
+  transition: all 0.25s ease-in;
+  width: 45%;
+  background: transparent;
+}
+
+.timeline .timeline-item .timeline-content p {
+  color: #fefefe;
+}
+
+.timeline .timeline-item .timeline-content p {
+  font-size: 16px;
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+
+.timeline .timeline-item .timeline-content .timeline-content-date {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.timeline .timeline-item .timeline-content .timeline-content-month {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.timeline .timeline-item .timeline-content.right {
+  float: right;
+  text-align: left;
+}
+
+@media screen and (max-width: 39.9375em) {
+  .timeline {
+    margin: 30px;
+    padding: 0;
+    width: 90%;
+  }
+  .timeline::before {
+    left: 0;
+  }
+  .timeline .timeline-item .timeline-content {
+    float: right;
+    text-align: left;
+    width: 90%;
+  }
+  .timeline .timeline-item .timeline-content::before, .timeline .timeline-item .timeline-content.right::before {
+    border-left: 0;
+    border-right: 7px solid #fefefe;
+    left: 10%;
+    margin-left: -6px;
+  }
+  .timeline .timeline-item .timeline-icon {
+    left: 0;
+  }
 }

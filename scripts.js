@@ -1,3 +1,8 @@
+function openResume()
+{
+    window.open("resume.pdf", '_blank');
+}
+
 $(document).ready(function() { 
     /* Every time the window is scrolled ... */
     $(window).scroll( function(){
