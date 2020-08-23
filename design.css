@@ -1,0 +1,62 @@
+body, html {
+  height: 100%;
+  font-size: calc(0.8em + 1vw);
+  background-color: #2e2e2e;
+  max-width: 100vw !important;
+}
+.bg {
+  /* The image used */
+  background-image: url("img/meDotted.jpg");
+  /* Full height */
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.titleBottomText
+{
+	/*Positioning of text */
+	position:absolute;                  
+    bottom:0;                          
+    left:50%;    
+    transform: translateX(-50%);
+    /*Style of text */
+    color: yellow;
+    font-size: 100%;
+    text-align: center;
+    text-shadow: 2px 2px black;
+}
+.hideme{
+	opacity: 0;
+}
+.aboutMeDiv{
+	padding: 0 0 0;
+	height: 100%;
+	background-image: url("img/dotsBG.png");
+}
+
+.aboutMeTitle
+{
+	margin-top: 0;
+	padding-top: 4vh;
+	text-align: center;
+	color: white;
+	text-shadow: 2px 2px black;
+	font-size: 130%;
+}
+.aboutMeText
+{
+	padding: 2% 2% 2%;
+	text-align: center;
+	color: #c9c9c9;
+}
+.widthLimit
+{
+	width: 99.8vw;
+}
+.aboutMeImage
+{
+	max-height: 30vh;
+	border-radius: 50%;
+}

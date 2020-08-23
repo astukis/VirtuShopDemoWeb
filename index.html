@@ -1,106 +1,26 @@
-<!doctype html>
-<html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aistis Škarnulis Portfolio</title>
-    <link rel="icon" type="image/png" href="assets/img/favicon.png">
-    <link rel="stylesheet" href="assets/css/app.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello, I am Aistis</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="design.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="scripts.js"></script>
+
+</head>
 <body>
-<div class="btn-group">
-<button class="CVbutton" onClick="document.getElementById('cv').scrollIntoView();"><i class="fa fa-user-o" aria-hidden="true"></i><br>CV</button>
-<button class="TimelineButton" onClick="document.getElementById('timeline').scrollIntoView();"><i class="fa fa-clock-o" aria-hidden="true"></i>
- <br>Timeline</button>
-<div class="IntroSpace">
-<br><img class="RoundIcon" src="assets/img/face.jpg" alt="Me :)"><br><br>
-<h1 class="IntroHeading">Hello, I am Aistis!</h1><br>
-<p class="IntroP">I am a young aspiring developer from Lithuania who always searches for ways to improve. I've been passionate about technology since I was a kid and dial-up internet, CD drives and 1GHz CPU were grand inovations.<br>Welcome to my portfolio!</p>
+<div class="bg">
+	<p class="titleBottomText">Nice to meet you.<br>My name is Aistis!</p>
 </div>
-<button class="ProjectButton"><i class="fa fa-desktop" aria-hidden="true"></i>
- <br>Projects</button>
-<button class="ContactButton"><i class="fa fa-id-card" aria-hidden="true"></i>
-<br>Contact</button>
+<div class="aboutMeDiv">
+	<h1 class="aboutMeTitle hideme"> A short intro about me</h1><br>
+	<div class="row widthLimit">
+    	<div class="col-4 mx-auto text-center">
+        	<img src="img/me_front.jpg" class="aboutMeImage hideme">
+    	</div>
+	</div>
+	<p class="hideme aboutMeText">I am a young aspiring developer from Lithuania who always searches for ways to improve. I've been passionate about technology since I was a kid and dial-up internet, CD drives and flip phones were grand inovations.</p>
 </div>
-<div class="divOnTop" id="topDiv">
-  <button class="hiddenButton" onclick="UnhideCV('topDiv')"> Press to reveal the CV</button>
-</div>
-<div class="divOnBottom" id="cvDiv">
-<iframe class="CVviewer" src="cv.pdf" id="cv"></iframe>
-</div>
-<div class="timeline" id="timeline">
-
-  <div class="timeline-item">
-    <div class="timeline-icon">
-      <br><i class="fa fa-child" aria-hidden="true"></i>
-    </div>
-    <div class="timeline-content">
-      <p class="timeline-content-date">1999</h2>
-      <p>I was born in Lazdijai, Lithuania</p>
-    </div>
-  </div>
-
-  <div class="timeline-item">
-    <div class="timeline-icon">
-      <br><i class="fa fa-desktop" aria-hidden="true"></i>
-    </div>
-    <div class="timeline-content right">
-      <p class="timeline-content-date">Around 2015</h2>
-      <p>Assembled my first computer from scrap parts</p>
-    </div>
-  </div>
-  <div class="timeline-item">
-    <div class="timeline-icon">
-      <br><i class="fa fa-code" aria-hidden="true"></i>
-    </div>
-    <div class="timeline-content">
-      <p class="timeline-content-date">2016-2017</h2>
-      <p>Learned basics of C++, C# and started developing games in Unity. Completed a 100 hours game development course by Solid Education (Lazdijai, Lithuania)</p>
-    </div>
-  </div>
-  <div class="timeline-item">
-    <div class="timeline-icon">
-      <br><i class="fa fa-book" aria-hidden="true"></i>
-    </div>
-    <div class="timeline-content right">
-      <p class="timeline-content-date">2017</h2>
-      <p>Did a summer internship in an IT company Solid Education (Kaunas, Lithuania). Primarily used C# MVC, MySQL and Git</p>
-    </div>
-  </div>
-  <div class="timeline-item">
-    <div class="timeline-icon">
-      <br><i class="fa fa-graduation-cap" aria-hidden="true"></i>
-    </div>
-    <div class="timeline-content">
-      <p class="timeline-content-date">2018</h2>
-      <p>Graduated Lazdijai Motiejus Gustaitis gymnasium with the highest score in English. Started studying in Kaunas University of Technology as an IT Engineer.</p>
-    </div>
-  </div>
-  <div class="timeline-item">
-    <div class="timeline-icon">
-      <br><i class="fa fa-bug" aria-hidden="true"></i>
-    </div>
-    <div class="timeline-content right">
-      <p class="timeline-content-date">2019</h2>
-      <p>Started working in uTest platform as a Freelance QA tester.</p>
-    </div>
-  </div>
-</div>
-
-</div>
-<script type="text/javascript">
-  function UnhideCV(id) 
-  {
-    var elem = document.getElementById(id);
-    elem.parentNode.removeChild(elem);
-    var cvWindow = document.getElementById('cv');
-    cvWindow.style.opacity=1;
-    var cvDiv = document.getElementById('cvDiv');
-    cvDiv.style.zIndex=1;
-  }
-</script>
-
 </body>
 </html>
