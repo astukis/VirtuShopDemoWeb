@@ -2,7 +2,8 @@
 <html>
 <head>
 	<title>Hello, I am Aistis</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">	<link rel="stylesheet" href="design.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">	
+	<link rel="stylesheet" href="design.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="scripts.js"></script>
@@ -19,83 +20,87 @@
       <a href="#1"><li>Welcome Screen</li></a>
       <a href="#2"><li>About Me</li></a>
       <a href="#3"><li>Timeline</li></a>
+      <a href="#4"><li>Contacts</li></a>
     </ul>
   </div>
 </nav>
 <div class="bg" id="1">
 	<p class="titleBottomText">Nice to meet you.<br>My name is Aistis!</p>
 </div>
-<div class="aboutMeDiv" id="2">
+<div class="dotDiv" id="2">
 	<h1 class="titleText hideme"> A short intro about me</h1><br>
 	<div class="row widthLimit">
     	<div class="col-7 mx-auto text-center">
         	<img src="img/me_front.jpg" class="aboutMeImage hideme">
     	</div>
 	</div>
-	<p class="hideme aboutMeText">I am a young aspiring developer from Lithuania who always searches for ways to improve. I've been passionate about technology since I was a kid and dial-up internet, CD drives and flip phones were grand inovations.</p>
+	<p class="hideme aboutMeText">I am a young aspiring developer / QA tester from Lithuania who always searches for ways to improve. I've been passionate about technology since I was a kid and dial-up internet, CD drives and flip phones were grand inovations.</p>
     <button type="button" class="btn btn-outline-light hideme resumeButton" onclick="openResume();"><i class="far fa-file"></i> Read my resume</button>
 </div>
-<div class="timelineDiv" id="3">
+<div class="dotDiv2" id="3">
 	<h1 class="titleText hideme">Timeline</h1><br>
-	<div class="timeline" id="timeline">
-	  <div class="timeline-item">
-	    <div class="timeline-icon">
-	      <br><i class="fa fa-child" aria-hidden="true"></i>
-	    </div>
-	    <div class="timeline-content hideme">
-	      <p class="timeline-content-date ">1999</p>>
-	      <p>I was born in Lazdijai, Lithuania</p>
-	    </div>
-	  </div>
-	  <div class="timeline-item">
-	    <div class="timeline-icon">
-	      <br><i class="fa fa-desktop" aria-hidden="true"></i>
-	    </div>
-	    <div class="timeline-content right">
-	      <p class="timeline-content-date">Around 2015</p>>
-	      <p>Assembled my first computer from scrap parts</p>
-	    </div>
-	  </div>
-	  <div class="timeline-item">
-	    <div class="timeline-icon">
-	      <br><i class="fa fa-code" aria-hidden="true"></i>
-	    </div>
-	    <div class="timeline-content">
-	      <p class="timeline-content-date">2016-2017</p>>
-	      <p>Learned basics of C++, C# and started developing games in Unity. Completed a 100 hours game development course by Solid Education (Lazdijai, Lithuania)</p>
-	    </div>
-	  </div>
-	  <div class="timeline-item">
-	    <div class="timeline-icon">
-	      <br><i class="fa fa-book" aria-hidden="true"></i>
-	    </div>
-	    <div class="timeline-content right">
-	      <p class="timeline-content-date">2017</p>>
-	      <p>Did a summer internship in an IT company Solid Education (Kaunas, Lithuania). Primarily used C# MVC, MySQL and Git</p>
-	    </div>
-	  </div>
-	  <div class="timeline-item">
-	    <div class="timeline-icon">
-	      <br><i class="fa fa-graduation-cap" aria-hidden="true"></i>
-	    </div>
-	    <div class="timeline-content">
-	      <p class="timeline-content-date">2018</p>>
-	      <p>Graduated Lazdijai Motiejus Gustaitis gymnasium with the highest score in English. Started studying in Kaunas University of Technology as an IT Engineer.</p>
-	    </div>
-	  </div>
-	  <div class="timeline-item">
-	    <div class="timeline-icon">
-	      <br><i class="fa fa-bug" aria-hidden="true"></i>
-	    </div>
-	    <div class="timeline-content right">
-	      <p class="timeline-content-date">2019</p>>
-	      <p>Started working in uTest platform as a Freelance QA tester.</p>
-	    </div>
-	  </div>
+	<div class="container">
+	   <div class="left-content">
+	      <p><br><br><b>Around 2015</b><br>Assembled my first computer from scrap parts</p>
+	      <p><b>2017</b><br>Did a summer internship in an IT company Solid Education (Kaunas, Lithuania). Primarily used C# MVC, MySQL and Git<br><br><br></p>
+	      <p><b>2019</b><br>Started working in uTest platform as a Freelance QA tester.</p>
+	      <p><br><br><br><br><br><br><br><br><br><br><br></p>
+
+	   </div>
+	   <div class="right-content">
+	      <p><b>1999</b><br>I was born in Lazdijai, Lithuania</p>
+	      <p><b>2016-2017</b><br>Learned basics of C++, C# and started developing games in Unity. Completed a 100 hours game development course by Solid Education (Lazdijai, Lithuania)</p>
+	      <p><b>2018</b><br>Graduated Lazdijai Motiejus Gustaitis gymnasium with the highest score in English. Started studying in Kaunas University of Technology as an IT Engineer.</p>
+	      <p><b>2019-2020</b><br>Studied in University of Primorska as an Erasmus exchange student (Koper, Slovenia).</p>
+	   </div>
 	</div>
 </div>
+<div class="dotDiv">
+	<h1 class="titleText hideme">Find me!</h1><br>
+	<section>
+  <ul id="services">
+  	<li>
+      <div>
+      	<a href="tel:+37062324443">
+          <i class="fa fa-phone" aria-hidden="true"></i>
+        </a>
+      </div>
+      <span>Call</span>
+    </li>
+    <li>
+      <div>
+      	<a href="mailto:astukis@gmail.com">
+          <i class="far fa-envelope" aria-hidden="true"></i>
+        </a>
+      </div>
+      <span>Email</span>
+    </li>
+    <li>
+      <div>
+        <a href="https://www.facebook.com/aistis.skarnulis">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+        </a>
+      </div>
+      <span>Facebook</span>
+    </li>
+    <li>
+      <div>
+        <a href="https://www.linkedin.com/in/aistis-skarnulis/">
+          <i class="fa fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </div>
+      <span>LinkedIn</span>
+    </li>
+    <li>
+      <div>
+        <a href="https://github.com/astukis/">
+          <i class="fa fa-github" aria-hidden="true"></i>
+        </a>
+      </div>
+      <span>Github</span>
+    </li>
+  </ul>
+</section>
+</div>
 </body>
-<!--
-Special thanks to Erik Terwan for providing the hamburger menu : https://codepen.io/erikterwan/
-//-->
 </html>
