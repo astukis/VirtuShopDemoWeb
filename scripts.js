@@ -2,6 +2,10 @@ function openResume()
 {
     window.open("resume.pdf", '_blank');
 }
+function openCV()
+{
+    window.open("CVBankas_Aistis.pdf", '_blank');
+}
 
 $(document).ready(function() { 
     /* Every time the window is scrolled ... */

@@ -129,6 +129,9 @@ body, html {
 {
   transform: none;
 }
+.languagesSwitch{
+  text-align: center;
+}
 .bg {
   /* The image used */
   background-image: url("img/meDotted.jpg");
